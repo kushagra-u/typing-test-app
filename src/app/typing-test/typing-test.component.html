@@ -1,0 +1,28 @@
+<div id="typingContainer"
+    class="container-lg border border-success p-2 mt-3 rounded-3 justify-content-around">
+    <div class="d-flex border border-success mb-3 bg-dark bg-gradient">
+        <div id="start" class="p-2"><button class="btn btn-success btn-lg" (click)="startTimer()">{{startText}}</button>
+        </div>
+        <div id="pause" class="p-2"> <button  id="btn1" class="btn btn-warning btn-lg" (click)="pauseTimer()">Pause</button></div>
+        <div class="p-2"><button  id="btn2" class="btn btn-danger btn-lg" (click)=" clearTimer()">Clear</button></div>
+        <div class="p-2"><button id="btn3" class="btn btn-lg">sec:&nbsp; {{second}} &nbsp; &nbsp;
+                min:&nbsp; {{minute}} &nbsp; &nbsp;
+                hour:&nbsp; {{hour}}</button></div>
+        <div class="p-2"><button  id="btn4" class="btn btn-primary btn-lg">Typing speed: &nbsp; {{wpm}}WPM</button></div>
+    </div>
+    <div class="form-floating">
+        <textarea (input)="handleInput($event)" class="form-control fs-4 text" id="floatingTextarea2" name="value" pInputTextArea [(ngModel)]="value"
+            (ngModelChange)="valueChange(value)" style="height: 300px"></textarea>
+    </div>
+    <div>
+        <button class="btn btn-primary btn-lg doneButton" (click)="submit()">done</button>
+    </div>
+</div>
+<div id="showResult"
+    class="container-lg border border-success p-2 mt-3 rounded-3  bg-info-subtle justify-content-around">
+    <h1>Your speed: <span>{{wpm}}</span><span style="font-size: medium; color: blueviolet;">WPM</span></h1>
+    <h3>You take total time: <span>{{second}}</span>Seconds &nbsp; <span>{{minute}}</span>Minutes &nbsp; <span>{{hour}}</span>Hours</h3>
+    <h3>You type total words: <span>{{remainingText}}</span></h3>
+    <p class="presult">good score!!! Persistently strive for improvement to achieve better results.</p>
+    <button class="btn btn-info btn-lg mt-2" (click)="showTyping()">Done</button>
+</div>

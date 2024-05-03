@@ -1,0 +1,48 @@
+#typingContainer{
+    background-color: blue;
+}
+#pause {
+    display: none;
+}
+
+#showResult {
+    display: none;
+    height: 50vh;
+    text-align: center;
+}
+
+h1 {
+    color: blue;
+    font-weight: 700;
+}
+
+h3 {
+    color: blueviolet;
+    font-weight: 600;
+    font-style: italic;
+}
+
+span {
+    color: darkblue;
+    font-size: larger;
+}
+
+.presult {
+    background-color: black;
+    color: deeppink;
+    border-radius: 10px;
+    width: 70vw;
+    margin: auto;
+}
+#btn1{
+    background-color: lightgreen;
+}
+#btn2{
+    background-color: red;
+}
+#btn3{
+    background-color: darkorange;
+}
+#btn4{
+    background-color: rgb(204, 20, 183);
+}
